@@ -6,13 +6,17 @@ Personal shared skills repository for **Antigravity**, **Codex**, and **OpenCode
 
 ```text
 harish-agent-skills/
-├── install.sh              # Symlinks all skills into Antigravity, Codex, OpenCode, and ~/.agents/skills
-├── README.md               # Generic setup, sync, and skill-specific docs
+├── install.sh                          # Symlinks all skills into Antigravity, Codex, OpenCode, and ~/.agents/skills
+├── README.md                           # Generic setup, sync, and skill-specific docs
 └── skills/
-    ├── fermion-rca/
-    │   └── SKILL.md        # Fermion production RCA workflow
-    └── <future-skill>/     # e.g. commit, pr, code-review, etc.
-        └── SKILL.md
+    ├── fermion-rca/                    # Fermion production RCA workflow (CW, SFU, Sentry, DB)
+    ├── pr-walkthrough/                 # Interactive PR learning (Problem -> Cause -> Fix)
+    ├── verification-before-completion/ # Proof before claiming fixed/passing
+    ├── brainstorm/                     # Align on problem & solution before writing code
+    ├── build-with-me/                  # Interactive 1-step-at-a-time pair programmer
+    ├── debug-bug/                      # Scientific debugging loop for hard bugs & regressions
+    ├── spec-driven-implementation/     # Spec-first workflow (PRODUCT.md / TECH.md)
+    └── feature-audit/                  # Audit existing/merged features against requirements
 ```
 
 ---
