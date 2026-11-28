@@ -46,9 +46,9 @@ If the dev says **"skip"**, **"no"**, or asks to commit directly, proceed immedi
 - Point to the specific file and line where the issue originated (or the missing logic).
 - Ask a quick check question about why this triggered the problem.
 
-### Stage 3: The Fix & Code Changes
-- Summarize the fix approach.
-- Walk through the key modified files and functions with concise diff references.
+### Stage 3: The Fix (Logic & How It Was Fixed)
+- Explain the logic-level solution: what logic was changed, why it works, and how the system behaves differently now.
+- Do NOT list low-level line-by-line file changes; focus on the reasoning and logical workflow.
 
 ---
 
@@ -61,8 +61,8 @@ When drafting the commit message and PR description (whether after completing th
 <type>: <short summary without conventional scopes>
 
 - Problem: <one-line summary>
-- Cause: <file/function where the issue was>
-- Fix: <one-line summary of what changed>
+- Cause: <where/why the issue originated>
+- Fix: <one-line summary of the logical fix>
 ```
 *Example:* `fix: Mediasoup transport reconnect failure` or `feat: add live stream optimization controls`
 
@@ -72,10 +72,9 @@ When drafting the commit message and PR description (whether after completing th
 <Plain explanation of the issue or feature requirement>
 
 ## Cause
-<Specific file and line or missing piece that caused the issue>
+<Why the issue happened or what gap existed in the previous logic>
 
-## Fix & Code Changes
-- **`<file-path>`**: <Concise explanation of changes made>
-- **`<file-path>`**: <Concise explanation of changes made>
+## Fix
+<Explain the logic of how it was resolved: the approach taken, how the flow/behavior changed, and why it fixes the issue. Focus on logic and system behavior, without raw file/diff listings.>
 ```
-*(No Blast Radius, Risks, Testing matrices, or Open Questions sections needed unless specifically requested).*
+*(No Blast Radius, Risks, Testing matrices, Open Questions, or raw file lists).*
