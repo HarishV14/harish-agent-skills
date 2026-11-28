@@ -1,8 +1,8 @@
 # harish-agent-skills
 
-Personal shared AI agent skills repository for **Antigravity**, **Codex**, and **OpenCode** across all machines.
+Personal shared AI agent skills and standing guidelines repository for **Antigravity**, **Codex**, and **OpenCode** across all machines.
 
-This repository centrally maintains your custom workflows and engineering standards. With a single install script, all skills are symlinked so that any `git pull` instantly updates all three AI tools.
+This repository centrally maintains your custom workflows, standing guidelines (`AGENTS.md`), and engineering runbooks. With a single install script, everything is symlinked so that any `git pull` instantly updates all three AI tools.
 
 ---
 
@@ -10,9 +10,10 @@ This repository centrally maintains your custom workflows and engineering standa
 
 ```text
 harish-agent-skills/
-├── install.sh                          # Symlinks all skills into Antigravity, Codex, OpenCode, and ~/.agents/skills
+├── install.sh                          # Symlinks all skills and AGENTS.md into Antigravity, Codex, and OpenCode
 ├── README.md                           # Setup, sync, and core usage guide
-├── SKILLS.md                           # Crisp guide for each skill (what it does, triggers, examples)
+├── AGENTS.md                           # Universal standing engineering rules (scope, git, brainstorm, verification)
+├── SKILLS.md                           # Crisp catalog for each skill (what it does, triggers, examples)
 └── skills/
     ├── fermion-rca/                    # Fermion production RCA workflow (CW, SFU, Sentry, DB)
     ├── pr-walkthrough/                 # Interactive PR learning (Problem -> Cause -> Fix)
@@ -21,7 +22,9 @@ harish-agent-skills/
     ├── build-with-me/                  # Interactive 1-step-at-a-time pair programmer
     ├── debug-bug/                      # Systematic debugging loop for hard bugs & regressions
     ├── spec-driven-implementation/     # Spec-first workflow (PRODUCT.md / TECH.md)
-    └── feature-audit/                  # Audit existing/merged features against requirements
+    ├── feature-audit/                  # Audit existing/merged features against requirements
+    ├── skill-gap-discovery/            # Detect recurring missing skills and suggest installing
+    └── find-skills/                    # Search & discover installable agent skills
 ```
 
 ---
@@ -37,11 +40,16 @@ chmod +x install.sh
 ./install.sh
 ```
 
-This symlinks every skill directory in `skills/` directly to:
-- `~/.gemini/config/skills/` (Antigravity)
-- `~/.codex/skills/` (Codex)
-- `~/.config/opencode/skills/` (OpenCode)
-- `~/.agents/skills/` (Standard shared agents directory)
+This symlinks:
+1. Every skill directory in `skills/` to:
+   - `~/.gemini/config/skills/` (Antigravity)
+   - `~/.codex/skills/` (Codex)
+   - `~/.config/opencode/skills/` (OpenCode)
+   - `~/.agents/skills/` (Shared agents directory)
+2. `AGENTS.md` standing rules to:
+   - `~/.gemini/config/AGENTS.md`
+   - `~/.codex/rules/AGENTS.md`
+   - `~/.config/opencode/AGENTS.md`
 
 ---
 
@@ -49,13 +57,13 @@ This symlinks every skill directory in `skills/` directly to:
 
 Because `install.sh` uses **symlinks** instead of copying files:
 
-- **When you update an existing skill:**
+- **When you update existing skills or AGENTS.md:**
   ```bash
   cd ~/harish-agent-skills && git pull
   ```
-  *(All tools see the update immediately. No need to re-run `install.sh`.)*
+  *(All tools see the updates immediately without re-running `install.sh`.)*
 
-- **When you add a brand-new skill:**
+- **When you add a brand-new skill directory:**
   ```bash
   cd ~/harish-agent-skills && git pull && ./install.sh
   ```
@@ -75,4 +83,4 @@ You can invoke skills in any of the three agents:
 
 For a concise summary of what each skill does, when it triggers, and chat command examples, see:
 
-👉 **[SKILLS.md](./SKILLS.md)** (Full catalog of all skills, including `fermion-rca`, `pr-walkthrough`, `verification-before-completion`, and more).
+👉 **[SKILLS.md](./SKILLS.md)** (Full catalog of all 10 skills).

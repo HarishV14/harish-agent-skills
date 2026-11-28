@@ -66,3 +66,19 @@ Short, crisp reference for every skill in this repository: what it does, when it
 * **When to use:** Reviewing inherited code or verifying whether a shipped feature is completely sound.
 * **Chat prompt:**
   > `"Run a feature-audit on the live-event sales data API."`
+
+---
+
+## 9. `skill-gap-discovery`
+* **What it does:** Identifies when you repeatedly hit a complex domain that lacks a dedicated skill (e.g. AWS CDK, Kubernetes, Playwright, Tailwind). It spots the recurring gap and recommends installable skills to handle it reliably.
+* **When to use:** When you notice the agent repeatedly having to solve the same external tool or framework problems from scratch.
+* **Chat prompt:**
+  > `"Use skill-gap-discovery to check what skills we might be missing for our workflow."`
+
+---
+
+## 10. `find-skills`
+* **What it does:** Discovers and searches installable agent skills from the open ecosystem when you want new capabilities or automated workflows.
+* **When to use:** Whenever you ask *"How do I do X with an agent skill?"* or *"Find a skill for X"*.
+* **Chat prompt:**
+  > `"Find a skill for Docker deployment automation."` or `"Is there an agent skill for GraphQL schema testing?"`
